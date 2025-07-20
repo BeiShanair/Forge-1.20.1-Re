@@ -18,11 +18,11 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, TutorialMod.MOD_ID);
 
     public static final RegistryObject<Block> ICE_ETHER_BLOCK =
-            registerBlocks("ice_ether_block", () -> new Block(BlockBehaviour.Properties.of().strength(3.0F, 2.0F)));
+            registerBlocks("ice_ether_block", () -> new Block(BlockBehaviour.Properties.of().strength(3.0F, 2.0F).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> RAW_ICE_ETHER_BLOCK =
             registerBlocks("raw_ice_ether_block", () -> new Block(BlockBehaviour.Properties.of().strength(3.0F, 2.0F)));
     public static final RegistryObject<Block> ICE_ETHER_ORE =
-            registerBlocks("ice_ether_ore", () -> new Block(BlockBehaviour.Properties.of().strength(3.0F, 2.0F)));
+            registerBlocks("ice_ether_ore", () -> new Block(BlockBehaviour.Properties.of().strength(3.0F, 2.0F).requiresCorrectToolForDrops()));
 
     private static <T extends Block>RegistryObject<Item> registerBlockItems(String name, RegistryObject<T> block){
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
