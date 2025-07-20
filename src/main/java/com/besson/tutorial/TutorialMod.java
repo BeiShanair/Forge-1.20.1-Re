@@ -1,5 +1,6 @@
 package com.besson.tutorial;
 
+import com.besson.tutorial.block.ModBlocks;
 import com.besson.tutorial.item.ModCreativeModeTabs;
 import com.besson.tutorial.item.ModItems;
 import com.mojang.logging.LogUtils;
@@ -35,6 +36,8 @@ public class TutorialMod
 
         ModItems.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
