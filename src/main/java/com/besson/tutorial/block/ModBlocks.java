@@ -24,8 +24,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> ICE_ETHER_ORE =
             registerBlocks("ice_ether_ore", () -> new Block(BlockBehaviour.Properties.of().strength(3.0F, 2.0F).requiresCorrectToolForDrops()));
 
-    private static <T extends Block>RegistryObject<Item> registerBlockItems(String name, RegistryObject<T> block){
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    private static <T extends Block> void registerBlockItems(String name, RegistryObject<T> block){
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     private static <T extends Block>RegistryObject<T> registerBlocks(String name, Supplier<T> blocks){
