@@ -46,7 +46,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .pattern("###")
                 .define('#', Items.BEETROOT)
                 .unlockedBy(getHasName(Items.BEETROOT), has(Items.BEETROOT))
-                .save(pWriter);
+                .save(pWriter, TutorialMod.MOD_ID + ":" + "sugar_from_beetroot");
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICE_ETHER_ORE.get())
                 .requires(ModItems.RAW_ICE_ETHER.get())
