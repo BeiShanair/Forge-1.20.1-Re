@@ -28,6 +28,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.CORN.get());
                         pOutput.accept(ModItems.STRAWBERRY.get());
                         pOutput.accept(ModItems.CHEESE.get());
+                        pOutput.accept(ModItems.ANTHRACITE.get());
                     })
                     .build());
 
