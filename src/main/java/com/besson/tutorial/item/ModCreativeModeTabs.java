@@ -25,6 +25,9 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.ICE_ETHER_BLOCK.get());
                         pOutput.accept(ModBlocks.RAW_ICE_ETHER_BLOCK.get());
                         pOutput.accept(ModBlocks.ICE_ETHER_ORE.get());
+                        pOutput.accept(ModItems.CORN.get());
+                        pOutput.accept(ModItems.STRAWBERRY.get());
+                        pOutput.accept(ModItems.CHEESE.get());
                     })
                     .build());
 
