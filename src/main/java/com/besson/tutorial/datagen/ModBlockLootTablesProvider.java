@@ -28,6 +28,18 @@ public class ModBlockLootTablesProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.RAW_ICE_ETHER_BLOCK.get());
         add(ModBlocks.ICE_ETHER_ORE.get(),
                 block -> createLikeCopperOreDrops(ModBlocks.ICE_ETHER_ORE.get(), ModItems.RAW_ICE_ETHER.get()));
+
+        dropSelf(ModBlocks.ICE_ETHER_STAIRS.get());
+        add(ModBlocks.ICE_ETHER_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.ICE_ETHER_SLAB.get()));
+        dropSelf(ModBlocks.ICE_ETHER_BUTTON.get());
+        dropSelf(ModBlocks.ICE_ETHER_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.ICE_ETHER_FENCE_GATE.get());
+        dropSelf(ModBlocks.ICE_ETHER_FENCE.get());
+        dropSelf(ModBlocks.ICE_ETHER_WALL.get());
+        add(ModBlocks.ICE_ETHER_DOOR.get(),
+                block -> createDoorTable(ModBlocks.ICE_ETHER_DOOR.get()));
+        dropSelf(ModBlocks.ICE_ETHER_TRAPDOOR.get());
     }
 
     protected LootTable.Builder createLikeCopperOreDrops(Block pBlock, Item pItem) {
