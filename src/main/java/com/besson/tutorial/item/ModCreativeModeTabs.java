@@ -46,6 +46,9 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.FIRE_ETHER_PICKAXE.get());
                         pOutput.accept(ModItems.FIRE_ETHER_SHOVEL.get());
                         pOutput.accept(ModItems.FIRE_ETHER_SWORD.get());
+                        pOutput.accept(ModItems.ICE_ETHER_PICKAXE.get());
+
+                        pOutput.accept(ModItems.PICKAXE_AXE_ITEM.get());
                     })
                     .build());
 

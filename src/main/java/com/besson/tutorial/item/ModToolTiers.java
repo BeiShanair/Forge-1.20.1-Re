@@ -16,10 +16,13 @@ public enum ModToolTiers implements Tier {
     FIRE_ETHER(5, 2031, 12.0f, 5.0f, 30, () -> Ingredient.of(ModItems.FIRE_ETHER.get()));
 
 
+    // 此处的等级没什么用
+    // Tag与后面的List是合起来判断的
+    // 比如说Tag里有钻石矿，但List只到WOOD，那么挖钻石矿时，也不会有掉落物
     public static final Tier ICE_ETHER = TierSortingRegistry.registerTier(
             new ForgeTier(5, 1400, 11f, 3f, 26,
                     ModBlockTags.ORE_TAGS, () -> Ingredient.of(ModItems.ICE_ETHER.get())),
-            ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "ice_ether"), List.of(Tiers.NETHERITE), List.of());
+            ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "ice_ether"), List.of(), List.of());
 
     private final int level;
     private final int uses;

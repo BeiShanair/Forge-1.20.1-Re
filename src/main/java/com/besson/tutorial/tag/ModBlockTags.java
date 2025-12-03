@@ -8,6 +8,8 @@ import net.minecraft.world.level.block.Block;
 
 public class ModBlockTags {
     public static final TagKey<Block> ORE_TAGS = create("ore_tags");
+    public static final TagKey<Block> ICE_ETHER_ORE = create("ice_ether_ore");
+    public static final TagKey<Block> PICKAXE_AXE_MINEABLE = create("pickaxe_axe_mineable");
 
     private static TagKey<Block> create(String pName) {
         return TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, pName));
