@@ -49,6 +49,11 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.ICE_ETHER_PICKAXE.get());
 
                         pOutput.accept(ModItems.PICKAXE_AXE_ITEM.get());
+
+                        pOutput.accept(ModItems.ICE_ETHER_HELMET.get());
+                        pOutput.accept(ModItems.ICE_ETHER_CHESTPLATE.get());
+                        pOutput.accept(ModItems.ICE_ETHER_LEGGINGS.get());
+                        pOutput.accept(ModItems.ICE_ETHER_BOOTS.get());
                     })
                     .build());
 

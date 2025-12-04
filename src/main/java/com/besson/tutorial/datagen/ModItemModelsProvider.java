@@ -43,6 +43,11 @@ public class ModItemModelsProvider extends ItemModelProvider {
         handheldItem(ModItems.FIRE_ETHER_SWORD);
 
         handheldItem(ModItems.PICKAXE_AXE_ITEM);
+
+        basicItem(ModItems.ICE_ETHER_HELMET.get());
+        basicItem(ModItems.ICE_ETHER_CHESTPLATE.get());
+        basicItem(ModItems.ICE_ETHER_LEGGINGS.get());
+        basicItem(ModItems.ICE_ETHER_BOOTS.get());
     }
 
     private <T extends Block> void buttonItem(RegistryObject<T> block, RegistryObject<Block> base) {
