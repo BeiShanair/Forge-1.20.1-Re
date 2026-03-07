@@ -1,6 +1,8 @@
 package com.besson.tutorial.block;
 
 import com.besson.tutorial.TutorialMod;
+import com.besson.tutorial.block.custom.CornCrop;
+import com.besson.tutorial.block.custom.StrawberryCrop;
 import com.besson.tutorial.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -53,6 +55,10 @@ public class ModBlocks {
     public static final RegistryObject<TrapDoorBlock> ICE_ETHER_TRAPDOOR =
             registerBlocks("ice_ether_trapdoor",
                     () -> new TrapDoorBlock(BlockBehaviour.Properties.of().strength(3.0F, 2.0F).noOcclusion(), BlockSetType.OAK));
+    public static final RegistryObject<StrawberryCrop> STRAWBERRY_CROP =
+            registerBlocks("strawberry_crop", () -> new StrawberryCrop(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+    public static final RegistryObject<CornCrop> CORN_CROP =
+            registerBlocks("corn_crop", () -> new CornCrop(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
     private static <T extends Block> void registerBlockItems(String name, RegistryObject<T> block){
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));

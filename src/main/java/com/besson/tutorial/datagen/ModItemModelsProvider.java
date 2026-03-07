@@ -48,6 +48,8 @@ public class ModItemModelsProvider extends ItemModelProvider {
         basicItem(ModItems.ICE_ETHER_CHESTPLATE.get());
         basicItem(ModItems.ICE_ETHER_LEGGINGS.get());
         basicItem(ModItems.ICE_ETHER_BOOTS.get());
+        
+        basicItem(ModItems.STRAWBERRY_SEEDS.get());
     }
 
     private <T extends Block> void buttonItem(RegistryObject<T> block, RegistryObject<Block> base) {
@@ -68,7 +70,7 @@ public class ModItemModelsProvider extends ItemModelProvider {
 
     private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
-                ResourceLocation.tryParse("item/handheld")).texture("layer0",
+                ResourceLocation.withDefaultNamespace("item/handheld")).texture("layer0",
                 ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID,"item/" + item.getId().getPath()));
     }
 }
