@@ -3,6 +3,8 @@ package com.besson.tutorial;
 import com.besson.tutorial.block.ModBlocks;
 import com.besson.tutorial.item.ModCreativeModeTabs;
 import com.besson.tutorial.item.ModItems;
+import com.besson.tutorial.sound.ModSounds;
+import com.besson.tutorial.villager.ModCustomVillagers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -38,6 +40,8 @@ public class TutorialMod
         ModCreativeModeTabs.register(modEventBus);
 
         ModBlocks.register(modEventBus);
+        ModCustomVillagers.register(modEventBus);
+        ModSounds.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

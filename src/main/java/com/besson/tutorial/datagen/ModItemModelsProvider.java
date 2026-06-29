@@ -50,6 +50,8 @@ public class ModItemModelsProvider extends ItemModelProvider {
         basicItem(ModItems.ICE_ETHER_BOOTS.get());
         
         basicItem(ModItems.STRAWBERRY_SEEDS.get());
+
+        basicItem(ModItems.A_MOMENT_APART_MUSIC_DISC.get());
     }
 
     private <T extends Block> void buttonItem(RegistryObject<T> block, RegistryObject<Block> base) {

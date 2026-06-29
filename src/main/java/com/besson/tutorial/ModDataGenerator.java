@@ -28,7 +28,9 @@ public class ModDataGenerator {
 
         generator.addProvider(event.includeServer(),
                 new ModItemTagsProvider(output, lookupProvider, blockTagsProvider.contentsGetter(),existingFileHelper));
-
+        generator.addProvider(event.includeServer(), 
+                new ModPointTagProvider(output, lookupProvider));
+        
         generator.addProvider(event.includeClient(), new ModBlockStatesProvider(output, existingFileHelper));
         generator.addProvider(event.includeClient(), new ModItemModelsProvider(output, existingFileHelper));
         generator.addProvider(event.includeClient(), new ModEnUsLangProvider(output));

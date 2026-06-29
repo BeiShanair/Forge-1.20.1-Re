@@ -56,6 +56,15 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.ICE_ETHER_BOOTS.get());
                         
                         pOutput.accept(ModItems.STRAWBERRY_SEEDS.get());
+
+                        pOutput.accept(ModItems.A_MOMENT_APART_MUSIC_DISC.get());
+
+                        pOutput.accept(ModItems.BASEBALL_BAT.get());
+                        pOutput.accept(ModBlocks.ORANGE_NIGHTSTAND.get());
+
+                        pOutput.accept(ModBlocks.SIMPLE_ORANGE_CLOCK.get());
+
+                        pOutput.accept(ModBlocks.SOFA_BLOCK.get());
                     })
                     .build());
 

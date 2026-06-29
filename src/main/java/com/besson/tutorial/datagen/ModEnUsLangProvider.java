@@ -58,5 +58,24 @@ public class ModEnUsLangProvider extends LanguageProvider {
 
         add("itemGroup.tutorial_tab", "Tutorial Tab");
         add("itemGroup.material", "Material");
+
+        add("entity.minecraft.villager.tutorial_mod.ice_ether_master", "Ice Ether Master");
+
+        add("sounds.tutorial_mod.found_ore", "Found Ore");
+        add("sounds.tutorial_mod.block_break", "Block Break");
+        add("sounds.tutorial_mod.block_place", "Block Place");
+        add("sounds.tutorial_mod.block_step", "Block Step");
+        add("sounds.tutorial_mod.block_hit", "Block Hit");
+        add("sounds.tutorial_mod.block_fall", "Block Fall");
+
+        add(ModItems.A_MOMENT_APART_MUSIC_DISC.get(), "A Moment Apart Music Disc");
+        add(ModItems.A_MOMENT_APART_MUSIC_DISC.get().getDescriptionId() + ".desc", "A Moment Apart");
+
+        add(ModItems.BASEBALL_BAT.get(), "Baseball Bat");
+        add(ModBlocks.ORANGE_NIGHTSTAND.get(), "Orange Nightstand");
+
+        add(ModBlocks.SIMPLE_ORANGE_CLOCK.get(), "Simple Orange Clock");
+
+        add(ModBlocks.SOFA_BLOCK.get(), "Sofa");
     }
 }

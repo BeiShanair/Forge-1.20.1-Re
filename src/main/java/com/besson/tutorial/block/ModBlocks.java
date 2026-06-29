@@ -2,8 +2,11 @@ package com.besson.tutorial.block;
 
 import com.besson.tutorial.TutorialMod;
 import com.besson.tutorial.block.custom.CornCrop;
+import com.besson.tutorial.block.custom.SimpleOrangeClock;
+import com.besson.tutorial.block.custom.SofaBlock;
 import com.besson.tutorial.block.custom.StrawberryCrop;
 import com.besson.tutorial.item.ModItems;
+import com.besson.tutorial.sound.ModSounds;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -22,7 +25,8 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, TutorialMod.MOD_ID);
 
     public static final RegistryObject<Block> ICE_ETHER_BLOCK =
-            registerBlocks("ice_ether_block", () -> new Block(BlockBehaviour.Properties.of().strength(3.0F, 2.0F).requiresCorrectToolForDrops()));
+            registerBlocks("ice_ether_block",
+                    () -> new Block(BlockBehaviour.Properties.of().strength(3.0F, 2.0F).requiresCorrectToolForDrops().sound(ModSounds.BLOCK_SOUNDS)));
     public static final RegistryObject<Block> RAW_ICE_ETHER_BLOCK =
             registerBlocks("raw_ice_ether_block", () -> new Block(BlockBehaviour.Properties.of().strength(3.0F, 2.0F)));
     public static final RegistryObject<Block> ICE_ETHER_ORE =
@@ -59,6 +63,18 @@ public class ModBlocks {
             registerBlocks("strawberry_crop", () -> new StrawberryCrop(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
     public static final RegistryObject<CornCrop> CORN_CROP =
             registerBlocks("corn_crop", () -> new CornCrop(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> ORANGE_NIGHTSTAND =
+            registerBlocks("orange_nightstand",
+                    () -> new Block(BlockBehaviour.Properties.of().strength(2.0f, 6.0f).noOcclusion()));
+
+    public static final RegistryObject<Block> SIMPLE_ORANGE_CLOCK =
+            registerBlocks("simple_orange_clock",
+                    () -> new SimpleOrangeClock(BlockBehaviour.Properties.of().strength(2.0f, 3.0f).noOcclusion()));
+
+    public static final RegistryObject<Block> SOFA_BLOCK =
+            registerBlocks("sofa_block",
+                    () -> new SofaBlock(BlockBehaviour.Properties.of().strength(2.0f, 2.0f).noOcclusion()));
 
     private static <T extends Block> void registerBlockItems(String name, RegistryObject<T> block){
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
